@@ -14,3 +14,5 @@ For example, consider the following sentences where each letter represents a wor
   • S4: A B X C
 
 Then pairs the following pairs of sentences are at word edit distance 1 or less: (S1, S2), (S1, S3), (S2, S4), (S3, S4).
+
+Sample sentences file can be downloaded from : https://d396qusza40orc.cloudfront.net/mmds/datasets/sentences.txt.zip
