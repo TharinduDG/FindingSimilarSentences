@@ -13,7 +13,35 @@ import java.util.Map;
 import java.util.Set;
 
 public class EditLength1Sentences {
-
+	
+/*	I simply hashed all sentences to buckets by the first and last five words. Then sorted each list 
+	(replaced all words with integers) and merged duplicates into a single record with a counter.
+	 After that each list was iterated through compared each pair to each pair 
+	 (which were relatively small lists as most of candidates were duplicates). 
+*/
+	
+	/*
+	 * 
+	 * Function Distance1Max(word containers: S1, S2)
+		    If (Size of S1 < size of S2) Then Swap S1, S2
+		    If (Size of S1 - Size of S2 > 1 Then Return FALSE
+		    error <- none
+		    For pos From 1 To Size of S2 Do
+		        If  (error == none) Then
+		            If (S1[pos] != S2[pos]) Then
+		                If (Size of S1 == Size of S2) Then error <- replace
+		                Else error <- delete
+		            End of If / Else
+		        Else If (error == replace) Then
+		            If (S1[pos] != S2[pos]) Then Return FALSE
+		        Else
+		            If (S1[pos] != S2[pos - 1]) Then Return FALSE
+		        End of If / Else
+		    End of For
+		    If (error == delete And S1[Size of S1] != S2[Size of S2]) Then Return FALSE
+		    Return TRUE
+		End of Function
+	 */
 	private static final int EDIT_DISTANCE = 1;
 //	private static final String FILE_NAME = "sentences.txt";
 	private static final String FILE_NAME = "test.txt";
